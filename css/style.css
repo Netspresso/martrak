@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    /* overflow: hidden; */
+}
+
+h1 {
+    text-align: center;
+    padding: 15px;
+    font-size: 3rem;
+}
+
+div.card h4 {
+    font-size: 1.6rem;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding-bottom: 10px;
+}
+
+div.card h4::after {
+    content: '';
+    display: block;
+    width: 80%;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    /* transform: translateX(50%); */
+
+}
+
+
+div.card p {
+    -webkit-box-flex: 2;
+    flex-grow: 2;
+    font-weight: 600;
+
+}
+
+body {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('img/forest1280.jpg');
+    background-size: cover;
+    background-position-y: bottom;
+    /* overflow-y: hidden; */
+}
+
+div.container {
+    min-height: 80vh;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+
+}
+
+div.card {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    /* min-height: 30vh; */
+    flex-basis: 30vh;
+    justify-content: space-around;
+    text-align: center;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+div p {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+    /* position: absolute; */
+    /* bottom: 5px; */
+    padding: 0 15px;
+    justify-self: flex-end;
+    /* align-self: flex-end; */
+}
+
+@media (min-width: 641px) {
+    html {
+        font-size: 16px;
+        /* max-height: 100vh; */
+    }
+
+    div.container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        align-content: space-around;
+    }
+
+    div.card {
+        flex-basis: 45%;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        height: 30vh;
+    }
+}
+
+
+
+@media (min-width: 1025px) and (orientation: landscape) {
+    body {
+        background-image: url('img/forestBig.jpg');
+    }
+
+    div.container {
+        -webkit-box-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    footer {
+        justify-self: flex-end;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+    }
+
+    div.card {
+        align-self: center;
+        height: 40vh;
+        margin: 10px 20px;
+        min-height: 280px;
+        overflow: hidden;
+    }
+
+    h1 {
+        -webkit-box-flex: 3;
+        flex-grow: 3;
+    }
+
+    div.card p {
+        transform: translateY(400px);
+        -webkit-transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        -webkit-transform: translateY(400px);
+        -moz-transform: translateY(400px);
+        -ms-transform: translateY(400px);
+        -o-transform: translateY(400px);
+    }
+
+    div.card h4 {
+        transform: translateY(0);
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    div.card p {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+
+    div.card h4 {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+
+    div.card h4::after {
+        -webkit-transform: translateY(400px);
+        transform: translateY(400px);
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
+    }
+
+    div.card h4::after {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+
+}
+
+
+@media (min-width: 1025px) {
+    body {
+        background-image: url('img/forestBig.jpg');
+    }
+
+    div.container {
+        flex-wrap: nowrap;
+        -webkit-box-flex: 4;
+        flex-grow: 4;
+    }
+
+    footer {
+        justify-self: flex-end;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+    }
+
+    div.card {
+        align-self: flex-end;
+        height: 50vh;
+        margin: 10px 20px;
+        min-height: 280px;
+        overflow: hidden;
+    }
+
+    h1 {
+        -webkit-box-flex: 3;
+        flex-grow: 3;
+    }
+
+    div.card p {
+        -webkit-transform: translateY(400px);
+        transform: translateY(400px);
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+
+    div.card h4 {
+        -webkit-transform: translateY(150px);
+        transform: translateY(150px);
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+
+    }
+
+    div.card:hover p {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+
+    div.card:hover h4 {
+        transform: translateY(0px);
+
+    }
+
+    div.card h4::after {
+        transform: translateY(400px);
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        -webkit-transform: translateY(400px);
+        -moz-transform: translateY(400px);
+        -ms-transform: translateY(400px);
+        -o-transform: translateY(400px);
+    }
+
+    div.card:hover h4::after {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+
+}

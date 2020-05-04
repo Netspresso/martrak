@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: 'Raleway', sans-serif;
+    color: whitesmoke;
+    font-size: 10px;
+}
+
+body {
+    background-color: #2b2c2c;
+    height: 100vh;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    height: 70px;
+    width: 100%;
+    overflow: hidden;
+    /* background-image: url('img/img640.jpg'); */
+    /* position: fixed; */
+    /* background-size: cover;
+    background-position: center; */
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    /* padding: 15px; */
+    background-color: rgb(44, 44, 44);
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 10vw;
+    height: calc(100vh - 70px - 30px);
+    justify-content: space-around;
+}
+
+p {
+    text-align: justify;
+}
+
+footer {
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10vw;
+    font-size: 8px;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+nav {
+    position: absolute;
+    display: -webkit-box;
+    display: flex;
+    left: -100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    background-color: rgb(44, 44, 44);
+    padding: 35px 80px;
+    -webkit-transition: .7s ease;
+    transition: .7s ease;
+    height: 40vh;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+nav a {
+    display: inline-block;
+    text-align: center;
+    -webkit-transition: -webkit-text-decoration 1s linear;
+    transition: -webkit-text-decoration 1s linear;
+    transition: text-decoration 1s linear;
+    transition: text-decoration 1s linear, -webkit-text-decoration 1s linear;
+}
+
+
+i {
+    font-size: 2.5rem;
+    margin: 15px;
+}
+
+
+.burger {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    line-height: 50px;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+}
+
+.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 145px;
+    border-bottom: 1px solid whitesmoke;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+
+
+i.fas {
+    display: none;
+    color: gray;
+}
+
+i.show {
+    display: block;
+}
+
+nav.show {
+    left: 0;
+}
+
+i.fa-home {
+    font-size: 1rem;
+    color: whitesmoke;
+    margin: 0;
+    height: 60px;
+    line-height: 60px;
+}
+
+nav p {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+span::after {
+    content: '';
+    display: block;
+    width: 0;
+    border-bottom: 1px solid whitesmoke;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+}
+
+a:hover>span::after {
+    max-width: 145px;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-left: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: whitesmoke;
+    -webkit-box-shadow: inset 0 0 6px whitesmoke;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: whitesmoke;
+    -webkit-box-shadow: inset 0 0 6px whitesmoke;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: whitesmoke;
+}
+
+@media (min-width: 721px) {
+    html {
+        font-size: 16px;
+    }
+
+
+}
+
+@media (min-width: 881px) {
+    nav {
+        background-color: transparent;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        height: 60px;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        align-content: center;
+        left: 0;
+        width: 80%;
+        max-width: 1000px;
+        padding: 0;
+        line-height: 60px;
+    }
+
+
+    a {
+        text-align: center;
+        flex-basis: 100%;
+        height: 100%;
+        text-decoration: none;
+
+    }
+
+    nav p {
+
+        flex-basis: 100%;
+    }
+
+    div.burger {
+        display: none;
+    }
+
+    a:hover>span::after {
+        width: 80%;
+    }
+
+    .active::after {
+        width: 80%;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+/* @media (min-width: 1025px) {} */
