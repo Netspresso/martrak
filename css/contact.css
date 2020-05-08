@@ -195,25 +195,6 @@ div.container div {
     flex-shrink: 1;
 }
 
-div.facts,
-div.owners {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    width: 70%;
-    margin: 0 auto;
-}
-
-
-div.big h3 {
-    text-align: justify;
-}
-
-div.small p {
-    text-align: justify;
-}
 
 footer {
     /* position: absolute; */
@@ -223,16 +204,7 @@ footer {
     /* margin-top: calc(200vh - 36px); */
 }
 
-.img1 {
-    background-image: url('img/forest1280.jpg');
-    background-size: cover;
-    -webkit-transform: translateX(50vw);
-    transform: translateX(50vw);
-    /* border: 1px solid whitesmoke; */
-    -webkit-animation: welcome 2s linear both;
-    animation: welcome 2s linear both;
-    opacity: 0;
-}
+
 
 ::-webkit-scrollbar {
     width: 6px;
@@ -299,21 +271,8 @@ li {
     margin-left: 15px;
 }
 
-.img2 {
-    background-image: url('img/forest1280.jpg');
-    background-size: cover;
-    -webkit-transform: translateX(-50vw);
-    transform: translateX(-50vw);
-    opacity: 0;
-    -webkit-transition: 1.5s linear;
-    transition: 1.5s linear;
-}
 
-.img2.shown {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-}
+
 
 @media (min-width: 721px) {
     html {
@@ -340,10 +299,6 @@ li {
         line-height: 60px;
     }
 
-    img {
-        width: 100%;
-        height: auto;
-    }
 
     a {
         text-align: center;
